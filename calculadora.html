@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Calculadora</title>
+        <script> function somar() {
+            const n1 = document.getElementById("n1").value
+            const n2 = document.getElementById("n2").value
+            const Somar = Number(n1) + Number(n2)
+            const resultadoSoma = document.getElementById("resultadoSoma")
+            resultadoSoma.innerHTML = "A soma é igual a  " + Somar
+
+        }
+        function subtrair() {
+            const n1 = document.getElementById("n1").value
+            const n2 = document.getElementById("n2").value
+            const subtrair = Number(n1) -  Number(n2)
+            const resultadoSubtracao = document.getElementById("resultadoSubtracao")
+            resultadoSubtracao.innerHTML = "A subtração é igual a " + subtrair
+        }
+        function multiplicar() {
+            const n1 = document.getElementById("n1").value
+            const n2 = document.getElementById("n2").value 
+            const multiplicar = Number(n1) * Number(n2)
+            const resultadoMultiplicacao = document.getElementById("resultadoMultiplicacao")
+            resultadoMultiplicacao.innerHTML = "A multiplicação é igual a " + multiplicar
+        }
+
+        function dividir() {
+            const n1 =  document.getElementById("n1").value
+            const n2 = document.getElementById("n2").value
+            const dividir = Number(n1) / Number(n2)
+            const resultadoDivisao = document.getElementById("resultadoDivisao")
+            resultadoDivisao.innerHTML = "A divisão é igual a " + dividir
+        }
+
+
+        </script>
+        
+
+    </head>
+    <body>
+        <form action = "">
+        n1: <input type = "text" id = "n1"/><br>
+        n2: <input type = "text" id = "n2"/><br>
+        <input type = "button" value = "Somar" onclick = "somar()"/>
+        <input type = "button" value =  "Subtrair" onclick = "subtrair()"/>
+        <input type = "button" value =  "Multiplicar" onclick = "multiplicar()"/>
+        <input type = "button" value = "Dividir" onclick  = "dividir()"/>
+
+    <h2 id = "resultadoSoma"> A soma é igual a</h2>
+    <h2 id = "resultadoSubtracao"> A subtração é igual a</h2>
+    <h2 id = "resultadoMultiplicacao"> A multiplicação é igual a</h2>
+    <h2 id = "resultadoDivisao"> A divisão é igual a</h2>
+    </form>
+</body>
+</html>
