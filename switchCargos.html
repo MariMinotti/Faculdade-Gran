@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset =  "utf-8">
+        <title>Aumento de salário conforme o seu cargo</title>
+        <script>
+            window.onload = function() {
+                const cargo = prompt("Digite o seu cargo: ")
+                const salario =  Number(prompt("Digite o seu salário atual: "))
+                let aumento = 0
+                let mensagem = ""
+
+                switch (cargo.toLowerCase()) {
+                    case "estagiário":
+                        aumento =  2
+                        break
+                    case "analista":
+                        aumento =  1.5
+                        break
+                    case "gerente":
+                        aumento =  1.3 
+                        break
+                    case "presidente":
+                        aumento =  1.1 
+                        break
+                    default:
+                        mensagem = "Por favor, digite um cargo válido."
+                }
+
+               if (aumento >0) {
+                    const novoSalario =  salario * aumento  
+                    mensagem =  "Seu novo salário é: R$ " + novoSalario.toFixed(2)
+                    
+               }
+
+               document.getElementById("resultado").innerText = mensagem
+            }
+        </script>
+
+    </head>
+    <body>
+        <h2>Resultado do Cálculo do Seu Novo Salário</h2>
+        <div id ="resultado" ></div>
+
+    </body>
+</html>
