@@ -1,0 +1,75 @@
+body{
+    font-family: monospace;
+}
+
+ul{
+    font-family: Helvetica;
+}
+
+li{
+    list-style: circle  ;
+}
+
+#msg{
+    font-family: monospace;
+}
+
+.light-theme{
+    color:rgb(31, 31, 29);
+    background-color: palevioletred;
+
+}
+
+.dark-theme{ 
+    color:deeppink;
+    background-color: rgb(31, 31, 29);
+
+}
+
+:root{
+    --palevioletred: palevioletred;
+    --white: #fcfffd;
+    --black: #0a0707;
+    --deeppink: deeppink;
+
+}
+
+.light-theme{
+    --bg: var(--palevioletred);
+    --fontColor: var(--black);
+    --btnBg: var(--palevioletred);
+    --btnFontColor: var(--black);
+}
+
+.dark-theme{
+    --bg: var(--black);
+    --fontColor: var(--deeppink);
+    --btnBg: var(--black);
+    --btnFontColor: var(--deeppink);
+}
+
+*{
+    color: var(--fontColor);
+    font-family:helvetica;
+}
+
+body{
+    background-color: var(--bg);
+}
+
+.btn{
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    border: blueviolet;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    position:absolute;
+}
+
+.btn:focus{
+    outline-style:none
+}
+
+
