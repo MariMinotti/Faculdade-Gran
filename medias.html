@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médias das Notas dos Alunos</title>
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <h1>Média dos Alunos da turma C4</h1>
+    <div>Calcule a média dos alunos da turma C4 e informe se foram aprovados ou reprovados. A média para aprovação é 7.</div>
+    <div id="resultadoA"></div>
+    <div id="resultadoB"></div>
+    <script>
+        // Função para calcular e mostrar resultado de um aluno
+        function calcularMedia(nome, nota1, nota2, nota3, resultadoId) {
+            const media = (nota1 + nota2 + nota3) / 3;
+            const mensagem = media >= 7
+                ? "Parabéns " + nome + ", você foi aprovado com média " + media.toFixed(2)
+                : "Que pena " + nome + ", você foi reprovado com média " + media.toFixed(2);
+            document.getElementById(resultadoId).innerText = mensagem;
+        }
+
+        // Entrada dos dados do aluno A
+        const nome_aluno_A = prompt("Digite o nome do aluno A: ");
+        const nota1_A = Number(prompt("Digite a primeira nota do aluno " + nome_aluno_A));
+        const nota2_A = Number(prompt("Digite a segunda nota do aluno " + nome_aluno_A));
+        const nota3_A = Number(prompt("Digite a terceira nota do aluno " + nome_aluno_A));
+
+        // Calcula e mostra resultado do aluno A
+        calcularMedia(nome_aluno_A, nota1_A, nota2_A, nota3_A, "resultadoA");
+
+        // Após mostrar resultado A, pede dados do aluno B
+        const nome_aluno_B = prompt("Digite o nome do aluno B: ");
+        const nota1_B = Number(prompt("Digite a primeira nota do aluno " + nome_aluno_B));
+        const nota2_B = Number(prompt("Digite a segunda nota do aluno " + nome_aluno_B));
+        const nota3_B = Number(prompt("Digite a terceira nota do aluno " + nome_aluno_B));
+
+        // Calcula e mostra resultado do aluno B
+        calcularMedia(nome_aluno_B, nota1_B, nota2_B, nota3_B, "resultadoB");
+    </script>
+</body>
+</html>
