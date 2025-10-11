@@ -1,0 +1,16 @@
+h1 {
+    font-size: medium;
+    margin: 0.70em 0;
+    font-weight: bold;
+    color: #e7510c;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 2em;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #08353d;
+}
+
