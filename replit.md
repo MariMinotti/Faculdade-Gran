@@ -48,6 +48,26 @@ Every package extends `tsconfig.base.json` which sets `composite: true`. The roo
 - `pnpm run build` — runs `typecheck` first, then recursively runs `build` in all packages that define it
 - `pnpm run typecheck` — runs `tsc --build --emitDeclarationOnly` using project references
 
+## Java Project
+
+A basic standalone Java project lives in `java-app/`. It uses Maven as the build tool.
+
+- **Run:** `cd java-app && mvn exec:java -Dexec.mainClass=com.example.Main -q`
+- **Compile:** `cd java-app && mvn compile`
+- **Test:** `cd java-app && mvn test`
+- **Package (JAR):** `cd java-app && mvn package`
+- Source files: `java-app/src/main/java/com/example/`
+- Test files: `java-app/src/test/java/com/example/`
+
+### Key files
+
+| File | Purpose |
+|---|---|
+| `java-app/pom.xml` | Maven build config, Java 17, JUnit 5 dependency |
+| `java-app/src/main/java/com/example/Main.java` | Entry point |
+| `java-app/src/main/java/com/example/Greeter.java` | Example class |
+| `java-app/src/test/java/com/example/GreeterTest.java` | Unit tests |
+
 ## Packages
 
 ### `artifacts/api-server` (`@workspace/api-server`)
